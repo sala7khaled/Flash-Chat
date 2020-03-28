@@ -11,6 +11,8 @@ import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
     
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var titleLabel: CLTypingLabel!
     
     // Hide NavigationBar
@@ -25,6 +27,9 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        registerButton.setRadius()
+        loginButton.setRadius()
         
         Timer.scheduledTimer(withTimeInterval:  1, repeats: false) { (timer) in
             self.titleLabel.text = Constants.appName
